@@ -47,7 +47,7 @@ export function AppHeader(props: Props) {
     timoutAutoCompleteReference.current &&
       clearTimeout(timoutAutoCompleteReference.current);
     timoutAutoCompleteReference.current = setTimeout(async () => {
-      const response = await getMarvelCharacters(7, 0, text);
+      const response = await getMarvelCharacters(5, 0, text);
       setSuggestedSearch(response.data.results.map((item: any) => item.name));
     }, 200);
   };
@@ -69,7 +69,6 @@ export function AppHeader(props: Props) {
               border: "1px solid black",
               borderRadius: 5,
               paddingLeft: 2,
-              backgroundColor: "green",
             }}
           >
             <SearchIcon color="action" />
